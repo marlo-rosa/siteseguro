@@ -6,7 +6,7 @@
 
 </head>
 <body>
-    <h1>Cadastro Simulado</h1>
+    <h1>Cadastro</h1>
     <form id="cadastroFake">
         <div>
             <label for="nome">Nome:</label>
@@ -34,8 +34,8 @@
                 console.log(`Senha (simulada): ${primeiraLetra}${oculto}${ultimaLetra}`);
                 alert(`Senha (simulada): ${primeiraLetra}${oculto}${ultimaLetra} - Lembre-se, senhas reais nunca devem ser mostradas assim!`);
             } else if (senhaDigitada.length === 1) {
-                console.log(`Senha (simulada): ${senhaDigitada}*`);
-                alert(`Senha (simulada): ${senhaDigitada}* - Senhas curtas são inseguras!`);
+                console.log(`Senha: ${senhaDigitada}*`);
+                alert(`Senha: ${senhaDigitada}* - Senhas curtas são inseguras!`);
             } else {
                 console.log('Nenhuma senha digitada.');
                 alert('Por favor, digite uma senha.');
