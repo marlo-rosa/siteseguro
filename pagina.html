@@ -6,16 +6,43 @@
 
 </head>
 <body>
-    <h1>Atualização do Sistema</h1>
-    <p>Instalando atualizações importantes... (Etapa 3 de 5)</p>
-    <p style="margin-top: 20px;">Enquanto isso, qual dos seguintes protocolos é usado para transferência segura de arquivos?</p>
-    <ol>
-        <li>FTP</li>
-        <li>HTTP</li>
-        <li>SSH</li>
-        <li>SMTP</li>
-    </ol>
-    </body>
+    <h1>Cadastro Simulado</h1>
+    <form id="cadastroFake">
+        <div>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome">
+        </div>
+        <div>
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha">
+        </div>
+        <button type="submit">Cadastrar</button>
+        <p id="mensagemEnvio" style="display: none; color: green;">Dados enviados com sucesso (simulação)!</p>
+    </form>
+
+    <script>
+        document.getElementById('cadastroFake').addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede o envio real do formulário
+            document.getElementById('mensagemEnvio').style.display = 'block';
+            // Aqui poderíamos ter código JavaScript para simular o envio e talvez exibir
+            // uma representação parcial da senha no console do navegador (para fins de demonstração).
+            const senhaDigitada = document.getElementById('senha').value;
+            if (senhaDigitada.length > 1) {
+                const primeiraLetra = senhaDigitada.charAt(0);
+                const ultimaLetra = senhaDigitada.charAt(senhaDigitada.length - 1);
+                const oculto = '*'.repeat(senhaDigitada.length - 2);
+                console.log(`Senha (simulada): ${primeiraLetra}${oculto}${ultimaLetra}`);
+                alert(`Senha (simulada): ${primeiraLetra}${oculto}${ultimaLetra} - Lembre-se, senhas reais nunca devem ser mostradas assim!`);
+            } else if (senhaDigitada.length === 1) {
+                console.log(`Senha (simulada): ${senhaDigitada}*`);
+                alert(`Senha (simulada): ${senhaDigitada}* - Senhas curtas são inseguras!`);
+            } else {
+                console.log('Nenhuma senha digitada.');
+                alert('Por favor, digite uma senha.');
+            }
+        });
+    </script>
+</body>
 
 
 </html>
