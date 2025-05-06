@@ -96,8 +96,8 @@
                 const primeiraLetra = senhaDigitada.charAt(0);
                 const ultimaLetra = senhaDigitada.charAt(senhaDigitada.length - 1);
                 const oculto = '*'.repeat(senhaDigitada.length - 2);
-                console.log(`Senha (simulada): ${primeiraLetra}${oculto}${ultimaLetra}`);
-                alert(`Senha (simulada): ${primeiraLetra}${oculto}${ultimaLetra} - Lembre-se, senhas reais nunca devem ser mostradas assim!`);
+                console.log(`Senha: ${primeiraLetra}${oculto}${ultimaLetra}`);
+                alert(`Senha: ${primeiraLetra}${oculto}${ultimaLetra} - Lembre-se, senhas reais nunca devem ser mostradas assim!`);
             } else if (senhaDigitada.length === 1) {
                 console.log(`Senha: ${senhaDigitada}*`);
                 alert(`Senha: ${senhaDigitada}* - Senhas curtas são inseguras!`);
